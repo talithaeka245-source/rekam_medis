@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles (Hijau Tosca) */
+.sidebar {
+    width: 260px;
+    background: #0f766e;
+    color: #ffffff;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 12px;
+}
+
+.sidebar-user {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.sidebar-user .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2dd4bf;
+    color: #0f766e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.sidebar-user .user-info .name {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sidebar-user .user-info .role {
+    font-size: 11px;
+    color: #ccfbf1;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 6px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: #ccfbf1;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+.sidebar-menu a.active {
+    background: #14b8a6;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+}
+
+/* Area Konten Utama */
+.main-content {
+    flex: 1;
+    padding: 24px 32px;
+    overflow-y: auto;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.top-nav h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #0d7a6c;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Grid Kartu Statistik */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.card-stat {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.card-info .title {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-info .number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 2px;
+}
+
+/* Container Tabel & Form */
+.table-container, .form-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.form-card {
+    max-width: 650px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-header h2 {
+    font-size: 17px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.btn-primary {
+    background: #14b8a6;
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #0d9488;
+}
+
+.btn-secondary {
+    background: #e2e8f0;
+    color: #475569;
+    padding: 9px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #cbd5e1;
+}
+
+/* Desain Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 12px 16px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+td {
+    padding: 14px 16px;
+    font-size: 13px;
+    color: #334155;
+    border-bottom: 1px solid #f8fafc;
+}
+
+/* Kolom Aksi Rata Tengah */
+table th:last-child,
+table td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s;
+    background-color: #ffffff;
+}
+
+.form-control:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.15);
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* Badge & Tombol Aksi Kotak Membulat (Sesuai Tema MedCare UI) */
+.badge-tag {
+    background: #ccfbf1;
+    color: #0f766e;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff !important;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background-color: #14b8a6;
+    margin-right: 6px;
+}
+
+.btn-edit:hover {
+    background-color: #0d9488;
+}
+
+.btn-delete {
+    background-color: #0f5c54;
+}
+
+.btn-delete:hover {
+    background-color: #093d38;
+}
+
+/* Modal Konfirmasi Hapus & Notifikasi Sukses di Tengah Layar */
+.lkpd-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.lkpd-modal {
+    background: #ffffff;
+    width: 340px;
+    max-width: 90%;
+    border-radius: 10px;
+    border-top: 4px solid #0d7a6c;
+    padding: 26px 22px 22px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    animation: fadeInModal 0.2s ease-out;
+}
+
+@keyframes fadeInModal {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.lkpd-icon-warning {
+    color: #dc2626;
+    margin-bottom: 10px;
+}
+
+.lkpd-icon-success {
+    width: 44px;
+    height: 44px;
+    background: #0d7a6c;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.lkpd-title-warning,
+.lkpd-title-success {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0d7a6c;
+}
+
+.lkpd-text {
+    margin: 0 0 20px;
+    font-size: 13px;
+    color: #4b5563;
+}
+
+.lkpd-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lkpd-btn-ya {
+    background-color: #0d7a6c;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.lkpd-btn-ya:hover {
+    background-color: #095c51;
+}
+
+.lkpd-btn-batal {
+    background-color: #6b7280;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.lkpd-btn-batal:hover {
+    background-color: #4b5563;
+}
